@@ -1,0 +1,19 @@
+[project]
+name = "apple-jobs-etl"
+version = "0.1.0"
+description = "Medallion PySpark pipeline on Onyxia S3 for Apple Jobs dataset"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pyspark>=3.5.0",
+    "boto3>=1.35.0",
+]
+
+[project.scripts]
+silver-transform = "apple_jobs_etl.silver_transform:main"
+gold-aggregate = "apple_jobs_etl.gold_aggregate:main"
+verify-results = "apple_jobs_etl.verify:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
