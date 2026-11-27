@@ -7,7 +7,13 @@ from .s3_utils import download_file, upload_directory
 
 
 def build_spark(app_name: str = "apple-jobs-silver") -> SparkSession:
-    return SparkSession.builder.appName(app_name).master("local[*]").getOrCreate()
+    return (
+        SparkSession.builder.appName(app_name)
+        .master("local[2]")
+        .config("spark.driver.memory", "1g")
+        .config("spark.sql.shuffle.partitions", "4")
+        .getOrCreate()
+    )
 
 
 def main() -> None:

@@ -1,0 +1,30 @@
+2026-11-27 16:55:51 UTC
+Namespace / User: user-n-meny-ece | Bucket: user-n-meny-ece
+[S3] Downloaded s3://user-n-meny-ece/Projet/apple_jobs.csv -> /tmp/medallion_work/bronze/apple_jobs.csv
+[SILVER] Raw rows: 2148 | Deduplicated rows: 2036 | Duplicates removed: 112
+[S3] Uploaded /tmp/medallion_work/silver/apple_jobs_clean/part-00000-cd26b4ae-b333-4708-97f3-a2b0a1dc07cf-c000.snappy.parquet -> s3://user-n-meny-ece/silver/apple_jobs_clean/part-00000-cd26b4ae-b333-4708-97f3-a2b0a1dc07cf-c000.snappy.parquet
+[S3] Uploaded /tmp/medallion_work/silver/apple_jobs_clean/part-00001-cd26b4ae-b333-4708-97f3-a2b0a1dc07cf-c000.snappy.parquet -> s3://user-n-meny-ece/silver/apple_jobs_clean/part-00001-cd26b4ae-b333-4708-97f3-a2b0a1dc07cf-c000.snappy.parquet
+[S3] Downloaded s3://user-n-meny-ece/silver/apple_jobs_clean/part-00000-cd26b4ae-b333-4708-97f3-a2b0a1dc07cf-c000.snappy.parquet -> /tmp/medallion_work/silver/apple_jobs_clean/part-00000-cd26b4ae-b333-4708-97f3-a2b0a1dc07cf-c000.snappy.parquet
+[S3] Downloaded s3://user-n-meny-ece/silver/apple_jobs_clean/part-00001-cd26b4ae-b333-4708-97f3-a2b0a1dc07cf-c000.snappy.parquet -> /tmp/medallion_work/silver/apple_jobs_clean/part-00001-cd26b4ae-b333-4708-97f3-a2b0a1dc07cf-c000.snappy.parquet
++--------------+----------+-----------+---------+--------+----------+----------+-------+----------+
+|country       |total_jobs|python_jobs|java_jobs|sql_jobs|linux_jobs|spark_jobs|ml_jobs|python_pct|
++--------------+----------+-----------+---------+--------+----------+----------+-------+----------+
+|United States |1648      |571        |363      |152     |193       |104       |212    |34.65     |
+|Israel        |75        |39         |3        |1       |14        |0         |3      |52.0      |
+|China         |59        |14         |7        |4       |8         |1         |5      |23.73     |
+|United Kingdom|56        |12         |17       |2       |8         |6         |14     |21.43     |
+|Singapore     |38        |10         |14       |4       |9         |4         |4      |26.32     |
+|India         |35        |11         |22       |8       |6         |5         |4      |31.43     |
+|Germany       |18        |9          |0        |0       |1         |0         |1      |50.0      |
+|Ireland       |16        |6          |0        |1       |3         |0         |0      |37.5      |
+|Japan         |16        |2          |2        |0       |1         |0         |1      |12.5      |
+|Australia     |15        |1          |1        |1       |2         |0         |0      |6.67      |
+|France        |8         |3          |1        |0       |1         |0         |1      |37.5      |
+|Brazil        |7         |3          |2        |1       |0         |3         |1      |42.86     |
+|Switzerland   |7         |6          |0        |0       |2         |1         |5      |85.71     |
+|Canada        |6         |2          |5        |1       |2         |1         |0      |33.33     |
+|Mexico        |5         |0          |0        |0       |0         |0         |0      |0.0       |
++--------------+----------+-----------+---------+--------+----------+----------+-------+----------+
+only showing top 15 rows
+[GOLD] Aggregated CSV written to /tmp/medallion_work/gold/country_skills_summary.csv
+[S3] Uploaded /tmp/medallion_work/gold/country_skills_summary.csv -> s3://user-n-meny-ece/gold/country_skills_summary.csv
